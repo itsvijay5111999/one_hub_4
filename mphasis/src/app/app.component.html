@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern UI Dashboard</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #1e293b;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #94a3b8;
+    }
+
+    .banner {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    .dashboard {
+      display: flex;
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #334155;
+      color: white;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .sidebar li {
+      margin: 15px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .sidebar li:hover {
+      color: #94a3b8;
+    }
+
+    .sidebar .material-icons {
+      margin-right: 10px;
+    }
+
+    .main-content {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      color: #1e293b;
+      margin-top: 10px;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #1e293b;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .dashboard {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Modern UI Dashboard</h1>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Profile</a>
+      <a href="#">Settings</a>
+    </nav>
+  </header>
+
+  <div class="banner">Welcome to the One Hub Dashboard. Stay productive and organized!</div>
+
+  <div class="dashboard">
+    <aside class="sidebar">
+      <ul>
+        <li><span class="material-icons">dashboard</span> Dashboard</li>
+        <li><span class="material-icons">analytics</span> Analytics</li>
+        <li><span class="material-icons">settings</span> Settings</li>
+        <li><span class="material-icons">logout</span> Logout</li>
+      </ul>
+    </aside>
+
+    <section class="main-content">
+      <!-- Card 1 -->
+      <div class="card" onclick="window.open('https://angular.io/docs', '_blank')">
+        <img src="assets/angular.png" alt="Angular Docs">
+        <h3>Angular Docs</h3>
+        <p>Learn Angular with official docs.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card" onclick="window.open('https://www.typescriptlang.org/docs/', '_blank')">
+        <img src="assets/typescript.png" alt="TypeScript Docs">
+        <h3>TypeScript Docs</h3>
+        <p>Learn TypeScript concepts.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card" onclick="window.open('https://github.com', '_blank')">
+        <img src="assets/github.png" alt="GitHub">
+        <h3>GitHub</h3>
+        <p>Explore open-source projects on GitHub.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 One Hub Dashboard. All rights reserved.
+  </footer>
+</body>
+</html>
